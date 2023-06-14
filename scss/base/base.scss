@@ -1,0 +1,58 @@
+// Colors 
+$primary: #00DFA2;
+$background1: #e9f8f9;
+$background2: #eee;
+$background3: #f1f1f1;
+$font: black;
+$darkmodeBackground: #181823;
+
+
+// Fonts 
+$header: 'Outfit';
+$paragraph: 'Outfit';
+$paragraph-size: 16px;
+
+
+// Mixins
+
+// Center a element
+@mixin centerAElement{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Remove the disc from the a tag
+@mixin anchorToNormal($typeofelement){
+    @if($typeofelement == 'li'){
+        list-style: none;
+    }@else if($typeofelement == 'a'){
+        text-decoration: none;
+    }
+}
+
+@mixin simpleParagraphStyle{
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 1.7em;
+}
+
+@mixin subheader{
+    font-family: 'Poppins';
+    margin-bottom: 0px;
+    font-weight: 500;
+}
+
+@mixin sub-containers{
+    width: 97%;
+    margin: auto;
+    border-radius: 10px;
+    padding: 10px 30px;
+    color: black;
+}
+
+@mixin simpleflexedContainer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
