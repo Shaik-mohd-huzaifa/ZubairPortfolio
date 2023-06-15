@@ -1,0 +1,479 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,800;1,900&family=Outfit:wght@100;200;300;400;500;600;700&family=Poppins:ital,wght@0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.navbar {
+  width: 100%;
+  padding: 10px;
+  height: 50px;
+  display: flex;
+  box-sizing: border-box;
+  font-size: 10px; }
+  .navbar .logo {
+    width: 50%; }
+  .navbar .links {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; }
+    .navbar .links li {
+      list-style: none;
+      padding: 10px; }
+      .navbar .links li a {
+        text-decoration: none;
+        color: black;
+        font-family: 'Poppins';
+        font-weight: 500;
+        font-size: 1.7em; }
+    .navbar .links .menu {
+      position: relative;
+      display: none; }
+      .navbar .links .menu .btn {
+        font-size: 20px;
+        cursor: pointer;
+        color: #f1f1f1;
+        border-radius: 50%;
+        background-color: black;
+        width: 35px;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .navbar .links .menu .btn li {
+          padding: 0; }
+      .navbar .links .menu .btn.dark {
+        background-color: #00DFA2; }
+        .navbar .links .menu .btn.dark li {
+          color: white !important; }
+      .navbar .links .menu .content {
+        position: absolute;
+        left: -150px;
+        border-radius: 5px;
+        width: 200px;
+        height: 85px;
+        padding: 10px 10px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1); }
+        .navbar .links .menu .content li {
+          width: 100%;
+          text-align: center;
+          padding: 2px 0px;
+          border-radius: 5px;
+          background-color: #00DFA2;
+          transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1); }
+      .navbar .links .menu .content.hidden {
+        display: flex; }
+      .navbar .links .menu .content.dark li a {
+        color: white !important; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  background-image: url("../Static Images/landing 2.svg");
+  background-repeat: repeat-y;
+  background-position: center;
+  background-size: contain;
+  background-color: #f1f1f1; }
+
+.landing {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 40px;
+  font-size: 10px; }
+  .landing .profile {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .landing .profile .img {
+      display: flex;
+      justify-content: center; }
+      .landing .profile .img img {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        margin: auto; }
+    .landing .profile p {
+      font-family: 'Poppins';
+      font-weight: 500;
+      font-size: 1.7em;
+      text-align: center;
+      padding: 0;
+      color: black; }
+    .landing .profile .changing-header {
+      width: fit-content;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100px;
+      color: #00DFA2; }
+      .landing .profile .changing-header h1 {
+        font-family: "Outfit";
+        font-size: 7em;
+        margin: 0;
+        transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1); }
+      .landing .profile .changing-header .line {
+        width: 10px;
+        height: 100%;
+        background-color: #000;
+        padding-left: 10px;
+        visibility: visible; }
+      .landing .profile .changing-header .line.disabled {
+        visibility: hidden; }
+
+.about-section {
+  width: 97%;
+  margin: auto;
+  border-radius: 10px;
+  padding: 10px 30px;
+  color: black;
+  background-color: #00DFA2; }
+  .about-section h2 {
+    font-family: 'Poppins';
+    margin-bottom: 0px;
+    font-weight: 500; }
+  .about-section p {
+    margin-top: 5px;
+    font-family: "Outfit";
+    font-size: 19px; }
+
+.indi-container {
+  width: 97%;
+  margin: auto; }
+
+.skills-icons h2 {
+  width: 100%;
+  font-family: 'Poppins';
+  margin-bottom: 0px;
+  font-weight: 500;
+  padding: 10px 30px 20px;
+  text-align: center; }
+
+.skills-icons p {
+  font-family: "Outfit";
+  font-size: 19px;
+  padding: 10px 30px; }
+
+.skills-icons .icons {
+  width: 100%;
+  display: flex;
+  column-gap: 50px;
+  justify-content: center; }
+
+.skills-icons .progress {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .skills-icons .progress progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none; }
+  .skills-icons .progress .imagebox {
+    width: 80%;
+    height: 80%;
+    background-size: 160%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%; }
+  .skills-icons .progress img {
+    width: 200%; }
+
+.strategies-section {
+  padding: 10px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 10px; }
+  .strategies-section h2 {
+    width: 100%;
+    font-family: 'Poppins';
+    margin-bottom: 0px;
+    font-weight: 500; }
+  .strategies-section .boxedtext {
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #00DFA2;
+    font-family: "Outfit";
+    width: fit-content;
+    margin-bottom: 0; }
+
+.progress:hover {
+  transform: scale(1.2); }
+
+.sample {
+  width: 150px;
+  height: 150px;
+  background-image: url("../Static Images/After Effects.svg");
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 160%; }
+  .sample img {
+    width: 100%;
+    border-radius: 50%; }
+
+.journey {
+  padding: 10px 30px;
+  display: flex;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  justify-content: space-evenly; }
+  .journey h2 {
+    width: 100%;
+    font-family: 'Poppins';
+    margin-bottom: 0px;
+    font-weight: 500;
+    padding: 10px 30px 20px;
+    text-align: center; }
+  .journey .outerbox {
+    width: 47%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .journey .outerbox .line {
+      height: 100px;
+      width: 300px;
+      border-left: 3px dashed black;
+      justify-self: flex-start; }
+    .journey .outerbox .mainBox {
+      width: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 10px 20px;
+      column-gap: 20px;
+      box-sizing: border-box;
+      background-color: #00DFA2;
+      border-radius: 5px; }
+      .journey .outerbox .mainBox img {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background-color: #f1f1f1; }
+      .journey .outerbox .mainBox .DiscBox {
+        width: fit-content;
+        font-size: 10px; }
+        .journey .outerbox .mainBox .DiscBox p {
+          font-family: "Outfit";
+          font-size: 16px;
+          margin-bottom: 0;
+          margin-top: 5px; }
+
+.clients-sections {
+  width: 100%;
+  height: 100px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1); }
+  .clients-sections .movingBoxes {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    transition: all 0.6s cubic-bezier(0.075, 0.82, 0.165, 1); }
+    .clients-sections .movingBoxes p {
+      font-size: 25px;
+      color: white; }
+
+.portfolio {
+  width: 100%;
+  padding: 10px 30px; }
+  .portfolio h2 {
+    width: 100%;
+    font-family: 'Poppins';
+    margin-bottom: 0px;
+    font-weight: 500;
+    padding: 10px 30px 20px;
+    text-align: center; }
+  .portfolio .top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; }
+    .portfolio .top img {
+      width: 49%;
+      border-radius: 10px; }
+  .portfolio .bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; }
+    .portfolio .bottom img {
+      width: 33%;
+      border-radius: 10px; }
+
+.footer {
+  width: 97%;
+  box-sizing: border-box;
+  margin: 10px auto;
+  padding: 30px 30px;
+  background-color: #00DFA2;
+  justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
+  border-radius: 10px; }
+  .footer .inner-section {
+    width: 30%; }
+    .footer .inner-section li {
+      list-style: none;
+      text-decoration: none;
+      color: black;
+      font-family: "Outfit";
+      font-size: 18px;
+      font-weight: 500; }
+      .footer .inner-section li a {
+        text-decoration: none;
+        color: black;
+        font-family: "Outfit";
+        font-size: 18px;
+        font-weight: 500; }
+
+.darkmode {
+  width: 50px;
+  height: 30px;
+  border-radius: 25px;
+  border: 3px solid black;
+  background-color: #000;
+  position: relative; }
+  .darkmode .innerball {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-image: url("../Static Images/moon.png");
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 3px;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1); }
+  .darkmode .innerball.dark {
+    border-color: #f1f1f1;
+    background-image: url("../Static Images/light.png");
+    left: 21px;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1); }
+
+.footer.darkcontainer, .mainBox.darkcontainer, .about-section.darkcontainer, .boxedtext.darkmodefont {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  -o-backdrop-filter: blur(2px);
+  -moz-backdrop-filter: blur(2px); }
+
+.darkmodefont {
+  color: #00DFA2 !important; }
+
+.outerbox.darkcontainer .line {
+  border-left-color: #fff; }
+
+@media screen and (max-width: 1020px) {
+  .journey .outerbox .line {
+    width: 1px; }
+  .journey .outerbox .mainBox {
+    width: 250px;
+    height: 200px;
+    flex-direction: column;
+    justify-content: center; }
+    .journey .outerbox .mainBox .DiscBox {
+      text-align: center; }
+  .footer .inner-section li {
+    font-size: 16px; }
+    .footer .inner-section li a {
+      font-size: 16px; }
+  .changing-header {
+    font-size: 8px; } }
+
+@media screen and (max-width: 800px) {
+  .about-section h2 {
+    font-family: 'Poppins';
+    margin-bottom: 0px;
+    font-weight: 500;
+    margin-top: 10px; }
+  .skills-icons .progress {
+    width: 70px;
+    height: 70px; }
+  .skills-icons .icons {
+    justify-content: space-evenly;
+    column-gap: 0; } }
+
+@media screen and (max-width: 720px) {
+  .landing .changing-header {
+    font-size: 6px;
+    height: 60px; }
+  .h2s {
+    font-size: 19px !important; }
+  .footer {
+    justify-content: space-between; }
+    .footer .inner-section {
+      width: fit-content; } }
+
+@media screen and (max-width: 650px) {
+  .journey {
+    padding: 10px;
+    justify-content: space-between; }
+    .journey .outerbox .mainBox {
+      width: 180px;
+      height: 180px; }
+      .journey .outerbox .mainBox img {
+        width: 50px;
+        height: 50px; }
+  .portfolio {
+    padding: 10px; } }
+
+@media screen and (max-width: 550px) {
+  .portfolio .bottom {
+    flex-wrap: wrap; }
+    .portfolio .bottom img:nth-child(1), .portfolio .bottom img:nth-child(2) {
+      width: 49%; }
+    .portfolio .bottom img:last-child {
+      display: none; }
+  .navbar .links .menu {
+    display: block; }
+    .navbar .links .menu .content {
+      display: none; }
+  .desklist {
+    display: none; }
+  .changing-header {
+    text-align: center; }
+  .landing .profile .img img {
+    width: 200px;
+    height: 200px; } }
+
+@media screen and (max-width: 430px) {
+  .about-section {
+    padding: 10px 16px; }
+    .about-section p {
+      font-size: 16px; }
+  .skills-icons .icons {
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 10px; }
+  .footer {
+    flex-wrap: wrap; }
+    .footer .inner-section {
+      width: 45%;
+      text-align: center; }
+    .footer .inner-section:nth-child(3) {
+      margin-top: 20px;
+      text-align: center;
+      width: 100%; }
+  .journey .outerbox {
+    padding: 0px; }
+    .journey .outerbox .mainBox {
+      width: 150px;
+      padding: 10px; }
+      .journey .outerbox .mainBox .DiscBox p {
+        font-size: 14px; }
+  .skills-icons .discription {
+    font-size: 16px; }
+  .strategies-section .boxedtext {
+    font-size: 15px; } }
