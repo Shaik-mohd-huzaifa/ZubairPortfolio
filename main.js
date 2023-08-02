@@ -116,7 +116,7 @@ for(i = 0;i < Skillvalues.length;i++){
         progressContainer.className = 'progress';
         imagexont.className = 'imagebox';
         // Skillimage.src = `Static Images/${Skillvalues[i]}.svg`;
-        imagexont.style.backgroundImage = `url('../Static\ Images/${Skillvalues[i]}.svg')`;
+        imagexont.style.backgroundImage = `url('Static\ Images/${Skillvalues[i]}.svg')`;
         iconBox.appendChild(progressContainer);
         // progressContainer.appendChild(Skillimage);
         progressContainer.appendChild(imagexont);
